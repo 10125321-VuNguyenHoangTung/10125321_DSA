@@ -1,20 +1,19 @@
 ﻿using System;
-
-class Program
+class Program 
 {
-    static string DaoNguoc(string s)
+    static int Tinhtong(int N) 
     {
-        if (s.Length <= 1)
-            return s;
-
-        return DaoNguoc(s.Substring(1)) + s[0];
+       if (N == 0) return 0;
+        if(N == 1) return 1;
+        return N + Tinhtong(N - 1);
     }
-
-    static void Main()
+    static void Main() 
     {
-        Console.Write("Nhap chuoi: ");
-        string s = Console.ReadLine();
-
-        Console.WriteLine("Chuoi dao nguoc: " + DaoNguoc(s));
+        Console.WriteLine("Tinh tong tu 1 den N");
+        Console.WriteLine("Nhap N: ");
+        int N = int.Parse(Console.ReadLine());
+        int tong = Tinhtong(N);
+        Console.WriteLine("Tong tu 1 den N la: " + tong);
     }
+    
 }
