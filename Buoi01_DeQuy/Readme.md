@@ -19,6 +19,7 @@ dotnet run --project Buoi01_DeQuy
 ```
 ````
 === Chương 1 Bài 2 ===
+```
 1
 2
 Fizz
